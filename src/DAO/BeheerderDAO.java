@@ -15,7 +15,6 @@ import java.sql.SQLException;
  * @version 1.0, Nov 2016
  */
 public class BeheerderDAO extends ConnectDAO {
-
     /**
      * Hier wordt de LoginController gedacaleerd.
      */

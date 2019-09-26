@@ -12,6 +12,7 @@ import java.sql.SQLException;
  */
 public class BedrijfTagDAO extends ConnectDAO {
 
+
     /**
      * Hier wordt wordt een object van klant opgeslagen.
      * Deze bevat de klantgegevens die wordt gebruikt in de statements

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.KlantenController">
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <TableView fx:id="tableView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="367.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="voornaamCol" prefWidth="110.732421875" text="Voornaam" />
+                <TableColumn fx:id="achternaamCol" prefWidth="110.732421875" text="Achternaam" />
+                  <TableColumn fx:id="woonplaatsCol" prefWidth="110.732421875" text="Woonplaats" />
+                  <TableColumn fx:id="adresCol" prefWidth="110.732421875" text="Adres" />
+                  <TableColumn fx:id="emailCol" prefWidth="110.732421875" text="Email" />
+                  <TableColumn fx:id="postcodeCol" prefWidth="110.732421875" text="Postcode" />
+                  <TableColumn fx:id="geboorteDatum" prefWidth="110.732421875" text="Geboortedatum" />
+                 <TableColumn fx:id="linkedInCol" prefWidth="110.732421875" text="LinkedIn" />
+                 <TableColumn fx:id="telefoonCol" prefWidth="110.732421875" text="Telefoon" />
+              </columns>
+            </TableView>
+         </center>
+         <top>
+            <Pane prefHeight="200.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="txtSearch" layoutX="725.0" layoutY="88.0" onKeyPressed="#searchKlant" prefHeight="29.0" prefWidth="290.0" />
+                  <Label layoutX="14.0" layoutY="53.0" text="Filter" />
+                  <Label layoutX="725.0" layoutY="62.0" text="Search" />
+                  <DialogPane layoutX="137.0" layoutY="133.0" prefWidth="536.0" />
+                  <JFXComboBox fx:id="cbTag" layoutX="14.0" layoutY="87.0" onMouseClicked="#filterTag" prefHeight="27.0" prefWidth="220.0" promptText="Selecteer een tag" />
+                  <JFXComboBox fx:id="cbWoonplaats" layoutX="328.0" layoutY="89.0" onMouseClicked="#filterWoonplaats" prefHeight="27.0" prefWidth="222.0" promptText="Selecteer een woonplaats" />
+                  <JFXButton fx:id="btnDeleteTag" buttonType="RAISED" layoutX="242.0" layoutY="90.0" onAction="#clearFilter" prefHeight="27.0" prefWidth="26.0">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/deleteCombobox_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnDeleteWoonplaats" buttonType="RAISED" layoutX="548.0" layoutY="90.0" onAction="#clearFilter" prefHeight="27.0" prefWidth="26.0">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/deleteCombobox_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+   </center>
+   <top>
+      <Pane fx:id="headerPane" prefHeight="60.0" prefWidth="1300.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="btnHome" fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="10.0" onMouseClicked="#Home" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/home.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER_RIGHT" layoutX="84.0" prefHeight="59.0" prefWidth="940.0" spacing="15.0">
+               <children>
+                  <Label text="Welkom" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblUsername" text="Label" textAlignment="JUSTIFY" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets right="15.0" />
+               </padding>
+            </HBox>
+         </children>
+      </Pane>
+   </top>
+   <bottom>
+      <Pane prefHeight="90.0" prefWidth="1300.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="btnWijzig" alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="14.0" layoutY="18.0" onAction="#wijzigKlantgegevens" prefHeight="55.0" prefWidth="160.0" text="Wijzig" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="24.0" layoutY="25.0" onMouseClicked="#wijzigKlantgegevens" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/edit.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnVerwijder" alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="274.0" layoutY="18.0" onAction="#verwijderKlant" prefHeight="55.0" prefWidth="160.0" text="Verwijder" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="283.0" layoutY="21.0" onMouseClicked="#verwijderKlant" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/delete-512.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnKlanten" alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="534.0" layoutY="17.0" onAction="#toevoegenKlanten" prefHeight="55.0" prefWidth="160.0" text="Voegtoe" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="544.0" layoutY="25.0" onMouseClicked="#toevoegenKlanten" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/userAdd.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnKlantenView" alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="791.0" layoutY="17.0" onAction="#showKlantGegevens" prefHeight="55.0" prefWidth="160.0" text="View" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="801.0" layoutY="28.0" onMouseClicked="#showKlantGegevens" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/view.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>

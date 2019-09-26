@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+        <Pane fx:id="pane" prefHeight="768.0" prefWidth="1024.0"
+               xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.KlantenNotitieTab">
+   <children>
+      <TextArea fx:id="textAreaNotitie" layoutX="134.0" layoutY="122.0" prefHeight="316.0" prefWidth="756.0" promptText="Notitie" />
+      <Text fill="WHITE" layoutX="396.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Klanten notitie">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tableViewNotitie" layoutX="134.0" layoutY="468.0" prefHeight="200.0" prefWidth="756.0">
+        <columns>
+          <TableColumn fx:id="datumCol" prefWidth="75.0" text="Datum" />
+            <TableColumn fx:id="titelCol" prefWidth="125.0" text="Titel" />
+          <TableColumn fx:id="beschrijvingCol" prefWidth="553.95" text="Beschrijving" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="pane" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.BedrijvenTabPersoonController">
+   <children>
+      <TableView fx:id="klantenlijst" layoutX="41.0" layoutY="32.0" onMouseClicked="#klantenLijstDeslect"
+                 prefHeight="234.0" prefWidth="954.0">
+        <columns>
+            <TableColumn fx:id="t1voornaamCol" prefWidth="110.0" text="Voornaam" />
+            <TableColumn fx:id="t1achternaamCol" prefWidth="110.0" text="Achternaam" />
+            <TableColumn fx:id="t1woonplaatsCol" prefWidth="110.0" text="Woonplaats" />
+            <TableColumn fx:id="t1adresCol" prefWidth="200.0" text="Adres" />
+            <TableColumn fx:id="t1geboorteDatum" prefWidth="150.0" text="Geboortedatum" />
+            <TableColumn fx:id="t1telefoon" prefWidth="110.0" text="Telefoon" />
+            <TableColumn fx:id="t1email" prefWidth="162.0" text="Email" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnToevoegen" buttonType="RAISED" layoutX="41.0" layoutY="605.0" onAction="#toevoegenPersoon" prefHeight="43.0" prefWidth="231.0" text="Toevoegen" />
+      <TableView fx:id="toevoegenKlantenlijst" layoutX="41.0" layoutY="355.0"
+                 onMouseClicked="#toevoegenKlantenLijstDeslect" prefHeight="234.0" prefWidth="954.0">
+        <columns>
+            <TableColumn fx:id="t2voornaamCol" prefWidth="110.0" text="Voornaam" />
+            <TableColumn fx:id="t2achternaamCol" prefWidth="110.0" text="Achternaam" />
+            <TableColumn fx:id="t2woonplaatsCol" prefWidth="110.0" text="Woonplaats" />
+            <TableColumn fx:id="t2adresCol" prefWidth="200.0" text="Adres" />
+            <TableColumn fx:id="t2geboorteDatum" prefWidth="150.0" text="Geboortedatum" />
+            <TableColumn fx:id="t2telefoon" prefWidth="110.0" text="Telefoon" />
+            <TableColumn fx:id="t2email" prefWidth="162.0" text="Email" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtSearch" layoutX="755.0" layoutY="294.0" onKeyPressed="#searchKlant" prefHeight="34.0" prefWidth="240.0" />
+      <Label layoutX="756.0" layoutY="274.0" text="Search" textFill="WHITE" />
+       <Label layoutX="42.0" layoutY="8.0" text="Klanten in dienst" textFill="white" />
+       <Label layoutX="42.0" layoutY="331.0" text="Overig Klanten" textFill="white" />
+      <JFXButton fx:id="btnVerwijder" buttonType="RAISED" layoutX="41.0" layoutY="279.0" onAction="#verwijderPersoon" prefHeight="43.0" prefWidth="231.0" text="Verwijderen" />
+      <JFXButton fx:id="btnKlantView" buttonType="RAISED" layoutX="333.0" layoutY="279.0" onAction="#klantView" prefHeight="43.0" prefWidth="231.0" text="Klantview" />
+   </children>
+</Pane>

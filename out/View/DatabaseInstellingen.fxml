@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DatabaseInstellingenController">
+   <children>
+      <JFXButton fx:id="btnOpslaan" alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="50.0" layoutY="564.0" onAction="#opslaanDatabaseInstellingen" prefHeight="55.0" prefWidth="160.0" ripplerFill="#b03030" text="Opslaan" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnCancel" alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="283.0" layoutY="564.0" onAction="#cancelDatabaseInstellingen" prefHeight="55.0" prefWidth="160.0" ripplerFill="#b03030" text="Cancel" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="60.0" layoutY="572.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/opslaan.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="293.0" layoutY="572.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/cancel.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtDbIp" alignment="CENTER"  labelFloat="true" layoutX="282.0" layoutY="198.0" prefWidth="500.0" promptText="Database ip" />
+      <JFXTextField fx:id="txtPoortnummer" alignment="CENTER" labelFloat="true" layoutX="282.0" layoutY="251.0" prefWidth="500.0" promptText="Poortnummer" />
+      <JFXTextField fx:id="txtDbGebruikersnaam" alignment="CENTER" labelFloat="true" layoutX="282.0" layoutY="304.0" prefWidth="500.0" promptText="DB gebruikersnaam" />
+      <JFXTextField fx:id="txtDbNaam"  alignment="CENTER" labelFloat="true" layoutX="282.0" layoutY="407.0" prefWidth="500.0" promptText="DB naam" />
+      <Text fill="WHITE" layoutX="365.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin instellingen">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Text>
+      <JFXPasswordField fx:id="txtDBWachtwoord" labelFloat="true" layoutX="282.0" layoutY="355.0" maxWidth="213.0" minWidth="500.0" prefHeight="33.0" prefWidth="213.0" promptText="DB wachtwoord" />
+   </children>
+</AnchorPane>

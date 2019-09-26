@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.BeheerdersControllerVoorBeheerders">
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <TableView fx:id="tableView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="367.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="voornaamCol" prefWidth="214.732421875" text="Voornaam" />
+                <TableColumn fx:id="achternaamCol" prefWidth="183.42959594726562" text="Achternaam" />
+                  <TableColumn fx:id="woonplaatsCol" prefWidth="220.63385009765625" text="Woonplaats" />
+                  <TableColumn fx:id="emailCol" prefWidth="187.36627197265625" text="Email" />
+              </columns>
+            </TableView>
+         </center>
+         <top>
+            <Pane prefHeight="200.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="txtSearch" layoutX="725.0" layoutY="77.0" onKeyReleased="#searchBeheerder" prefHeight="50.0" prefWidth="290.0" />
+                  <Label layoutX="725.0" layoutY="62.0" text="Search" />
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+   </center>
+   <top>
+      <Pane fx:id="headerPane" prefHeight="60.0" prefWidth="1300.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="719.0" layoutY="15.0" text="Welkom" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblUsername" layoutX="846.0" layoutY="15.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="btnHome" fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="10.0" onMouseClicked="#home" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/home.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </top>
+   <bottom>
+      <Pane prefHeight="90.0" prefWidth="1300.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

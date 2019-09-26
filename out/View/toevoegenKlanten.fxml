@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="pane" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ToevoegenKlantController">
+   <children>
+      <JFXTextField fx:id="txtVoornaam" alignment="CENTER" labelFloat="true" layoutX="112.0" layoutY="74.0" prefWidth="500.0" promptText="Voornaam" />
+      <JFXTextField fx:id="txtAchternaam" alignment="CENTER" labelFloat="true" layoutX="112.0" layoutY="125.0" prefWidth="500.0" promptText="Achternaam" />
+      <JFXDatePicker fx:id="datepicker" layoutX="112.0" layoutY="177.0" prefWidth="500.0" promptText="Geboortedatum" />
+      <JFXTextField fx:id="txtAdresHuisnr" alignment="CENTER" labelFloat="true" layoutX="112.0" layoutY="224.0" prefWidth="500.0" promptText="Adres+huisnr" />
+      <JFXTextField fx:id="txtPostcode" alignment="CENTER" labelFloat="true" layoutX="112.0" layoutY="268.0" prefWidth="500.0" promptText="Postcode" />
+      <JFXTextField fx:id="txtWoonplaats" alignment="CENTER" labelFloat="true" layoutX="112.0" layoutY="316.0" prefWidth="500.0" promptText="Woonplaats" />
+      <JFXTextField fx:id="txtTelefoon" alignment="CENTER" labelFloat="true" layoutX="112.0" layoutY="365.0" prefWidth="500.0" promptText="Telefoon" />
+      <JFXTextField fx:id="txtEmail" alignment="CENTER" labelFloat="true" layoutX="112.0" layoutY="410.0" prefWidth="500.0" promptText="Email" />
+      <JFXTextField fx:id="txtLinkedin" alignment="CENTER" labelFloat="true" layoutX="112.0" layoutY="455.0" prefWidth="500.0" promptText="Linkedin" />
+      <JFXButton fx:id="btnOpslaan" alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="29.0" layoutY="635.0" onAction="#klantenOpslaan" prefHeight="55.0" prefWidth="160.0" ripplerFill="#b03030" text="Opslaan" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnCancel" alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="262.0" layoutY="635.0" onAction="#cancelToevoegenKlanten" prefHeight="55.0" prefWidth="160.0" ripplerFill="#b03030" text="Cancel" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="40.0" layoutY="643.0" onMouseClicked="#klantenOpslaan" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/opslaan.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="268.0" layoutY="643.0" onMouseClicked="#cancelToevoegenKlanten" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/cancel.png" />
+         </image>
+      </ImageView>
+      <Label ellipsisString="" graphicTextGap="0.0" layoutX="670.0" layoutY="70.0" prefHeight="26.0" prefWidth="40.0" text="Tags" textFill="WHITE" />
+      <Pane fx:id="tkPane" layoutX="660.0" layoutY="99.0" prefHeight="652.0" prefWidth="313.0" />
+   </children>
+</Pane>

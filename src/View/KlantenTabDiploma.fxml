@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.65"  xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.KlantenTabDiplomaController">
+   <children>
+      <TableView fx:id="klantBestandTabel" layoutX="114.0" layoutY="396.0" prefHeight="295.0" prefWidth="500.0">
+        <columns>
+          <TableColumn fx:id="clmBestandNaam" prefWidth="471.0" text="Bestandsnaam" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnDownload" buttonType="RAISED" layoutX="685.0" layoutY="450.0" onAction="#downloadFile" prefHeight="47.0" prefWidth="220.0" text="Download" />
+      <JFXButton fx:id="btnUpload" layoutX="685.0" layoutY="530.0" onAction="#uploadFile" prefHeight="47.0" prefWidth="220.0" text="Upload" />
+      <TableView fx:id="klantbedrijftabel" layoutX="114.0" layoutY="75.0" prefHeight="295.0" prefWidth="500.0">
+         <columns>
+            <TableColumn fx:id="clmBedrijfNaam" prefWidth="149.0" text="Bedrijfnaam" />
+            <TableColumn fx:id="clmBedrijfAdres" prefWidth="200.0" text="Bedrijfnaam" />
+            <TableColumn fx:id="clmBedrijfContactpersoon" prefWidth="149.0" text="Contactpersoon" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="addbedrijf" onAction="#addBedrijf" buttonType="RAISED" layoutX="685.0" layoutY="140.0"
+                 prefHeight="47.0"
+                 prefWidth="220.0" text="Add" />
+      <JFXComboBox fx:id="bedrijflist" layoutX="114.0" layoutY="21.0"
+      prefHeight="27.0"
+      prefWidth="500.0"
+                   promptText="Selecteer een bedrijf om toe te voegen" />
+      <JFXButton fx:id="deletebedrijf" onAction="#deleteBedrijf" buttonType="RAISED" layoutX="685.0" layoutY="209.0"
+                 prefHeight="47.0"
+                 prefWidth="220.0" text="Delete" />
+      <JFXButton fx:id="btnDelete" layoutX="685.0" layoutY="599.0" onAction="#deleteFile" prefHeight="47.0" prefWidth="220.0" text="Delete" />
+   </children>
+</Pane>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="pane" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.WijzigenBeheerdersController">
+   <children>
+      <JFXTextField fx:id="txtVoornaam" alignment="CENTER" labelFloat="true" layoutX="262.0" layoutY="74.0" prefWidth="500.0" promptText="Voornaam" />
+      <JFXTextField fx:id="txtAchternaam" alignment="CENTER" labelFloat="true" layoutX="262.0" layoutY="125.0" prefWidth="500.0" promptText="Achternaam" />
+      <JFXTextField fx:id="txtAdresHuisnr" alignment="CENTER" labelFloat="true" layoutX="262.0" layoutY="168.0" prefWidth="500.0" promptText="Adres+huisnr" />
+      <JFXTextField fx:id="txtPostcode" alignment="CENTER" labelFloat="true" layoutX="262.0" layoutY="212.0" prefWidth="500.0" promptText="Postcode" />
+      <JFXTextField fx:id="txtWoonplaats" alignment="CENTER" labelFloat="true" layoutX="262.0" layoutY="260.0" prefWidth="500.0" promptText="Woonplaats" />
+      <JFXTextField fx:id="txtTelefoon" alignment="CENTER" labelFloat="true" layoutX="262.0" layoutY="309.0" prefWidth="500.0" promptText="Telefoon" />
+      <JFXTextField fx:id="txtEmail" alignment="CENTER" labelFloat="true" layoutX="262.0" layoutY="358.0" prefWidth="500.0" promptText="Email" />
+      <JFXPasswordField fx:id="txtWachtwoord" labelFloat="true" layoutX="262.0" layoutY="411.0" maxWidth="492.0" minWidth="500.0" prefHeight="33.0" prefWidth="492.0" promptText="Wachtwoord" />
+      <JFXButton fx:id="btnOpslaan" alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="29.0" layoutY="635.0" onAction="#opslaanBeheerders" prefHeight="55.0" prefWidth="160.0" ripplerFill="#b03030" text="Opslaan" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnCancel" alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="262.0" layoutY="635.0" onAction="#cancelToevoegenBeheerders" prefHeight="55.0" prefWidth="160.0" ripplerFill="#b03030" text="Cancel" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="39.0" layoutY="643.0" onMouseClicked="#opslaanBeheerders" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/opslaan.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="272.0" layoutY="643.0" onMouseClicked="#cancelToevoegenBeheerders" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/cancel.png" />
+         </image>
+      </ImageView>
+      <Label ellipsisString="" graphicTextGap="0.0" layoutX="273.0" layoutY="464.0" text="Rechten" textFill="WHITE" />
+      <JFXRadioButton fx:id="rbAdmin" layoutX="527.0" layoutY="464.0" text="Admin" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="myGroup" />
+         </toggleGroup></JFXRadioButton>
+      <JFXRadioButton fx:id="rbBeheerder" ellipsisString="" layoutX="639.0" layoutY="464.0" text="Beheerder" textFill="WHITE" toggleGroup="$myGroup" wrapText="true" />
+   </children>
+</Pane>

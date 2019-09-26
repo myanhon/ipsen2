@@ -1,0 +1,44 @@
+#pane{
+    -fx-background-color: #303030;
+}
+.jfx-text-field, .jfx-text-field:focused{
+    -fx-unfocus-color: #549788;
+    -fx-focus-color: #549788;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #303030;
+}
+.jfx-password-field, .jfx-password-field:focused{
+    -fx-focus-color: #549788;
+    -fx-unfocus-color: #549788;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #303030;
+}
+.jfx-button{
+    -fx-background-color: #549788;
+    -fx-text-fill: #ffffff;
+}
+#btnDeleteTag,#btnDeletePlaats, #btnDeleteWoonplaats{
+    -fx-background-color: transparent;
+}
+#gridPane{
+    -fx-background-color: #2e2e2e;
+}
+#headerPane{
+    -fx-background-color: #549788;
+}
+#bedrijflist .cell{
+    -fx-text-fill: white;
+}
+.jfx-text-field:error, .jfx-password-field:error, .jfx-text-area:error{
+    -fx-focus-color: #D34336;
+    -fx-unfocus-color: #D34336;
+}
+
+.jfx-text-field .errorLabel, .jfx-password-field .errorLabel , .jfx-text-area .errorLabel{
+    -fx-text-fill : #D34336;
+    -fx-font-size: 0.75em;
+}
+.jfx-text-field .errorIcon, .jfx-password-field .errorIcon, .jfx-text-area .errorIcon{
+    -fx-text-fill : #D34336;
+    -fx-font-size: 1em;
+}

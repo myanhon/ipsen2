@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="pane" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.KlantenViewController">
+   <children>
+      <TabPane fx:id="tabPane" prefHeight="715.0" prefWidth="1024.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tab" text="Klantengegevens">
+               <content>
+                  <fx:include fx:id="klantenTab" source="klantenTab.fxml" />
+               </content>
+          </Tab>
+          <Tab fx:id="tab1" text="Klanten notitie">
+               <content>
+                  <fx:include  fx:id="klantenNotitieTab" source="notiteTab.fxml" />
+               </content>
+          </Tab>
+            <Tab text="Diploma">
+              <content>
+                        <fx:include fx:id="klantenTabDiploma" source="KlantenTabDiploma.fxml"  />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>

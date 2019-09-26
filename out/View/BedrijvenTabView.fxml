@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="pane" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.BedrijvenTabController">
+   <children>
+      <JFXTextField fx:id="txtBedrijfsnaam" alignment="CENTER" editable="false" labelFloat="true" layoutX="122.0" layoutY="95.0" prefWidth="500.0" promptText="Bedrijfsnaam" />
+      <JFXTextField fx:id="txtAdresHuisnr" alignment="CENTER" editable="false" labelFloat="true" layoutX="122.0" layoutY="146.0" prefWidth="500.0" promptText="Adres+Huisnr" />
+      <JFXTextField fx:id="txtPostcode" alignment="CENTER" editable="false" labelFloat="true" layoutX="122.0" layoutY="198.0" prefWidth="500.0" promptText="Postcode" />
+      <JFXTextField fx:id="txtPlaats" alignment="CENTER" editable="false" labelFloat="true" layoutX="122.0" layoutY="251.0" prefWidth="500.0" promptText="Plaats" />
+      <JFXTextField fx:id="txtContactpersoon" alignment="CENTER" editable="false" labelFloat="true" layoutX="122.0" layoutY="299.0" prefWidth="500.0" promptText="Contactpersoon" />
+      <JFXTextField fx:id="txtTelefoon" alignment="CENTER" editable="false" labelFloat="true" layoutX="122.0" layoutY="351.0" prefWidth="500.0" promptText="Telefoonnummer" />
+      <JFXTextField fx:id="txtEmail" alignment="CENTER" editable="false" labelFloat="true" layoutX="122.0" layoutY="409.0" prefWidth="500.0" promptText="E-mail" />
+      <Label ellipsisString="" graphicTextGap="0.0" layoutX="670.0" layoutY="70.0" prefHeight="26.0" prefWidth="40.0" text="Tags" textFill="WHITE" />
+      <Pane fx:id="wbPane" layoutX="660.0" layoutY="99.0" prefHeight="652.0" prefWidth="313.0" />
+   </children>
+</Pane>

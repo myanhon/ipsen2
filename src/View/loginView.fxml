@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
+   <children>
+      <Text fx:id="errorMessage" fill="RED" layoutX="181.0" layoutY="359.0" nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrong username or password!" visible="false">
+         <font>
+            <Font name="Verdana" size="25.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="userField" alignment="CENTER" labelFloat="true" layoutX="67.0" layoutY="82.0"
+                    maxWidth="567.0" minWidth="401.0" prefHeight="33.0" prefWidth="567.0" promptText="Gebruikersnaam" />
+      <JFXPasswordField fx:id="passField" labelFloat="true" layoutX="67.0" layoutY="161.0" maxWidth="567.0"
+                        minWidth="567.0" onAction="#onEnter" prefHeight="33.0" prefWidth="567.0"
+                        promptText="Wachtwoord" />
+      <JFXButton fx:id="btnLogin" alignment="CENTER" buttonType="RAISED" layoutX="201.0" layoutY="240.0" onAction="#login" prefHeight="40.0" prefWidth="300.0" text="Login">
+         <font>
+            <Font name="MyriadPro-Bold" size="20.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btnDatabase" buttonType="RAISED" ellipsisString="" graphicTextGap="0.0" layoutX="637.0" layoutY="14.0" onAction="#openDatabaseInstellingen" prefHeight="40.0" prefWidth="49.0">
+         <font>
+            <Font size="1.0" />
+         </font></JFXButton>
+      <ImageView fitHeight="30.0" fitWidth="26.0" layoutX="649.0" layoutY="19.0" onMouseClicked="#openDatabaseInstellingen" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/database.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

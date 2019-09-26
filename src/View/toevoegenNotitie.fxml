@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="pane" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ToevoegenNotitieController">
+   <children>
+      <JFXComboBox fx:id="txtPersoon" editable="true" layoutX="222.0" layoutY="84.0" prefWidth="564.0" promptText="Persoon" style="" />
+      <JFXComboBox fx:id="txtBedrijf" editable="true" layoutX="222.0" layoutY="134.0" prefWidth="564.0" promptText="Bedrijven" />
+      <JFXTextField fx:id="txtOnderwerp" alignment="CENTER" labelFloat="true" layoutX="222.0" layoutY="184.0" prefWidth="564.0" promptText="Onderwerp" />
+      <JFXTextArea fx:id="txtOmschrijving" layoutX="222.0" layoutY="234.0" maxWidth="610.0" minWidth="580.0" prefHeight="292.0" prefWidth="564.0" promptText="Notitie omschrijving" />
+      <JFXButton fx:id="btnOpslaan" alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="316.0" layoutY="629.0" onAction="#opslaanNotitie" prefHeight="55.0" prefWidth="160.0" ripplerFill="#b03030" text="Opslaan" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnCancel" alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="549.0" layoutY="629.0" onAction="#cancelNotitie" prefHeight="55.0" prefWidth="160.0" ripplerFill="#b03030" text="Cancel" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="327.0" layoutY="639.0" onMouseClicked="#opslaanNotitie" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/opslaan.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="560.0" layoutY="639.0" onMouseClicked="#cancelNotitie" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/cancel.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

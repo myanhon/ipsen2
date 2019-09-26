@@ -1,0 +1,28 @@
+#pane{
+    -fx-background-color: #303030;
+}
+.jfx-text-field, .jfx-text-field:focused{
+    -fx-unfocus-color: #fca018;
+    -fx-focus-color: #fca018;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #303030;
+}
+.jfx-password-field, .jfx-password-field:focused{
+    -fx-focus-color: #fca018;
+    -fx-unfocus-color: #fca018;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #303030;
+}
+.jfx-button{
+    -fx-background-color: #fca018;
+    -fx-text-fill: #ffffff;
+}
+#btnDeleteTag,#btnDeletePlaats, #btnDeleteWoonplaats{
+    -fx-background-color: transparent;
+}
+#gridPane{
+    -fx-background-color: #303030;
+}
+#headerPane{
+    -fx-background-color: #fca018;
+}

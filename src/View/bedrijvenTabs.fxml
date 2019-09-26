@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.65" fx:controller="Controller.BedrijvenTabsController"
+      xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane prefHeight="768.0" prefWidth="1024.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Bedrijfgegevens">
+               <content>
+                  <fx:include fx:id="bedrijvenTab" source="BedrijvenTabView.fxml" />
+               </content>
+          </Tab>
+          <Tab text="Personen">
+               <content>
+                  <fx:include fx:id="bedrijvenTabPersoon" source="BedrijvenTabPersoon.fxml" />
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>
